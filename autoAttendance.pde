@@ -50,6 +50,7 @@ void loop(int _lastMillis, int times) {
           dataARoot[2], dataARoot[3], dataARoot[4])) {
           lastMillis = millis();
           stpA++;
+          println("cnt:"+ cnt);
           println("loading");
         }
       }
@@ -72,7 +73,7 @@ void loop(int _lastMillis, int times) {
           dataARoot[2], dataARoot[3], dataARoot[4])) { 
           if (colorChk(dataA[0], dataA[1] + dataA[5] * nthClass, 
             dataA[2], dataA[3], dataA[4])) { 
-            r.mouseMove(dataA[0], dataA[1]);
+            r.mouseMove(dataA[0], dataA[1] + dataA[5] * nthClass);
             r.mousePress(InputEvent.BUTTON1_MASK);
             r.mouseRelease(InputEvent.BUTTON1_MASK);
             println("enter");
