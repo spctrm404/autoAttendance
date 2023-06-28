@@ -3,7 +3,7 @@ import java.awt.Robot;
 import java.awt.event.InputEvent;
 Robot r;
 
-int[] offset = {-1, 4};
+int[] offset = {-1, 4}
 int[] tColor = {245, 66, 125};
 
 int[][] seqA = {
@@ -19,10 +19,10 @@ int[][] seqB = {
   {1490, 244, 16, 160, 247}, // 출결시작 버튼
   {907, 789, 18, 140, 225}, // 시작확인 버튼
   {288, 493, 18, 140, 225}, // 전체출석 버튼
-  {1046, 163, 139,211,243}, // 전체확인 버튼
+  {1046, 163, 138, 180, 248}, // 전체확인 버튼
   {1490, 244, 252, 65, 92}, // 완료 버튼
-  {1046, 183, 139,211,243}, // 완료확인 버튼
-  {1118, 163, 139,211,243}, // 출석확인 버튼
+  {1046, 183, 138, 180, 248}, // 완료확인 버튼
+  {1118, 163, 138, 180, 248}, // 출석확인 버튼
   {1730, 244, 46, 49, 58} // 목록 버튼
 };
 
@@ -76,7 +76,7 @@ void loop(int _lastMillis, int times) {
       if (millis() - lastMillis > 1000) {
         if (colorChk(dataARoot[0], dataARoot[1], 
           dataARoot[2], dataARoot[3], dataARoot[4])) { 
-          r.mouseMove(dataA[0]+offset[0], dataA[1]+offset[1]);
+          r.mouseMove(dataA[0], dataA[1]);
           r.mousePress(InputEvent.BUTTON1_MASK);
           r.mouseRelease(InputEvent.BUTTON1_MASK);
           nthClass = 0;
@@ -91,7 +91,7 @@ void loop(int _lastMillis, int times) {
           dataARoot[2], dataARoot[3], dataARoot[4])) { 
           if (colorChk(dataA[0], dataA[1] + dataA[5] * nthClass, 
             dataA[2], dataA[3], dataA[4])) { 
-            r.mouseMove(dataA[0]+offset[0], dataA[1] + dataA[5] * nthClass+offset[1]);
+            r.mouseMove(dataA[0], dataA[1] + dataA[5] * nthClass);
             r.mousePress(InputEvent.BUTTON1_MASK);
             r.mouseRelease(InputEvent.BUTTON1_MASK);
             println("enter");
@@ -113,7 +113,7 @@ void loop(int _lastMillis, int times) {
       if (millis() - lastMillis > 1000) {
         if (colorChk(dataARoot[0], dataARoot[1], 
           dataARoot[2], dataARoot[3], dataARoot[4])) { 
-          r.mouseMove(dataA[0]+offset[0], dataA[1]+offset[1]);
+          r.mouseMove(dataA[0], dataA[1]);
           r.mousePress(InputEvent.BUTTON1_MASK);
           r.mouseRelease(InputEvent.BUTTON1_MASK);
           lastMillis = millis();
@@ -145,7 +145,7 @@ void loopInLoop(int _lastMillis) {
       if (millis() - lastMillis > 1000) {
         if (colorChk(dataBRoot[0], dataBRoot[1], 
           dataBRoot[2], dataBRoot[3], dataBRoot[4])) {
-          r.mouseMove(dataB[0]+offset[0], dataB[1]+offset[1]);
+          r.mouseMove(dataB[0], dataB[1]);
           r.mousePress(InputEvent.BUTTON1_MASK);
           r.mouseRelease(InputEvent.BUTTON1_MASK);
           lastMillis = millis();
@@ -157,7 +157,7 @@ void loopInLoop(int _lastMillis) {
       if (millis() - lastMillis > 1000) {
         if (colorChk(dataBRoot[0], dataBRoot[1], 
           dataBRoot[2], dataBRoot[3], dataBRoot[4])) {
-          r.mouseMove(dataB[0]+offset[0], dataB[1]+offset[1]);
+          r.mouseMove(dataB[0], dataB[1]);
           r.mousePress(InputEvent.BUTTON1_MASK);
           r.mouseRelease(InputEvent.BUTTON1_MASK);
           lastMillis = millis();
@@ -169,7 +169,7 @@ void loopInLoop(int _lastMillis) {
       if (millis() - lastMillis > 1000) {
         if (colorChk(dataB[0], dataB[1], 
           dataB[2], dataB[3], dataB[4])) {
-          r.mouseMove(dataB[0]+offset[0], dataB[1]+offset[1]);
+          r.mouseMove(dataB[0], dataB[1]);
           r.mousePress(InputEvent.BUTTON1_MASK);
           r.mouseRelease(InputEvent.BUTTON1_MASK);
           lastMillis = millis();
@@ -181,7 +181,7 @@ void loopInLoop(int _lastMillis) {
       if (millis() - lastMillis > 1000) {
         if (colorChk(dataBRoot[0], dataBRoot[1], 
           dataBRoot[2], dataBRoot[3], dataBRoot[4])) {
-          r.mouseMove(dataB[0]+offset[0], dataB[1]+offset[1]);
+          r.mouseMove(dataB[0], dataB[1]);
           r.mousePress(InputEvent.BUTTON1_MASK);
           r.mouseRelease(InputEvent.BUTTON1_MASK);
           lastMillis = millis();
@@ -193,7 +193,7 @@ void loopInLoop(int _lastMillis) {
       if (millis() - lastMillis > 1000) {
         if (colorChk(dataB[0], dataB[1], 
           dataB[2], dataB[3], dataB[4])) {
-          r.mouseMove(dataB[0]+offset[0], dataB[1]+offset[1]);
+          r.mouseMove(dataB[0], dataB[1]);
           r.mousePress(InputEvent.BUTTON1_MASK);
           r.mouseRelease(InputEvent.BUTTON1_MASK);
           lastMillis = millis();
@@ -205,7 +205,7 @@ void loopInLoop(int _lastMillis) {
       if (millis() - lastMillis > 1000) {
         if (colorChk(dataBRoot[0], dataBRoot[1], 
           dataBRoot[2], dataBRoot[3], dataBRoot[4])) {
-          r.mouseMove(dataB[0]+offset[0], dataB[1]+offset[1]);
+          r.mouseMove(dataB[0], dataB[1]);
           r.mousePress(InputEvent.BUTTON1_MASK);
           r.mouseRelease(InputEvent.BUTTON1_MASK);
           lastMillis = millis();
@@ -217,7 +217,7 @@ void loopInLoop(int _lastMillis) {
       if (millis() - lastMillis > 1000) {
         if (colorChk(dataB[0], dataB[1], 
           dataB[2], dataB[3], dataB[4])) {
-          r.mouseMove(dataB[0]+offset[0], dataB[1]+offset[1]);
+          r.mouseMove(dataB[0], dataB[1]);
           r.mousePress(InputEvent.BUTTON1_MASK);
           r.mouseRelease(InputEvent.BUTTON1_MASK);
           lastMillis = millis();
@@ -229,7 +229,7 @@ void loopInLoop(int _lastMillis) {
       if (millis() - lastMillis > 1000) {
         if (colorChk(dataB[0], dataB[1], 
           dataB[2], dataB[3], dataB[4])) {
-          r.mouseMove(dataB[0]+offset[0], dataB[1]+offset[1]);
+          r.mouseMove(dataB[0], dataB[1]);
           r.mousePress(InputEvent.BUTTON1_MASK);
           r.mouseRelease(InputEvent.BUTTON1_MASK);
           lastMillis = millis();
@@ -241,7 +241,7 @@ void loopInLoop(int _lastMillis) {
       if (millis() - lastMillis > 1000) {
         if (colorChk(dataBRoot[0], dataBRoot[1], 
           dataBRoot[2], dataBRoot[3], dataBRoot[4])) {
-          r.mouseMove(dataB[0]+offset[0], dataB[1]+offset[1]);
+          r.mouseMove(dataB[0], dataB[1]);
           r.mousePress(InputEvent.BUTTON1_MASK);
           r.mouseRelease(InputEvent.BUTTON1_MASK);
           lastMillis = millis();
