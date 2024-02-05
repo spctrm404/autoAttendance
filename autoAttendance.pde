@@ -3,7 +3,7 @@ import java.awt.Robot;
 import java.awt.event.InputEvent;
 Robot r;
 
-int[] offset = {-1, 4};
+int[] offset = {-6, 10};
 int[] tColor = {245, 66, 125};
 
 int[][] seqA = {
